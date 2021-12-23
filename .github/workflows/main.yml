@@ -26,4 +26,4 @@ jobs:
           git checkout -b pdf_branch
           git add main.pdf
           git commit -m "Add main.pdf"
-          git push
+          git push pdf_branch
