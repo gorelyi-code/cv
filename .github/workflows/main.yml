@@ -22,8 +22,9 @@ jobs:
           git config user.email "gorelmich@yahoo.com"
       - name: Commit CV pdf
         run: |
-          docker cp CV:/main.pdf .
-          git checkout -b pdf_branch
+          mkdir cv
+          docker cp CV:/main.pdf cv/resume.pdf
+          git checkout -b cv
           git add main.pdf
           git commit -m "Add main.pdf"
-          git push pdf_branch
+          git push origin cv
