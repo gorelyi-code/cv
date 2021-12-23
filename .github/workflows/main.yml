@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  compile_cv_job:
+    runs-on: ubuntu:18.04
+    name: A job to compile CV
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Compile CV action step
+        uses: ./
+        id: compile

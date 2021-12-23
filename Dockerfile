@@ -14,6 +14,6 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
     cm-super \
     texlive-generic-extra
 
-COPY . app
+COPY cv_files/entrypoint.sh /entrypoint.sh
 
-CMD ["bash", "/app/compile_pdf.sh"]
+ENTRYPOINT [ "/entrypoint.sh" ]
