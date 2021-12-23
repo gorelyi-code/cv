@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          ref: 'cv'
       - name: Compile CV action step
         run: |
           docker build -t cv .
@@ -20,10 +22,6 @@ jobs:
         run: |
           git config user.name "Mikhail Gorelyi"
           git config user.email "gorelmich@yahoo.com"
-      - name: Checkout my_cv branch
-        uses: actions/checkout@v2
-        with:
-          ref: 'my_cv'
       - name: Commit CV pdf
         run: |
           docker cp CV:/main.pdf resume.pdf
