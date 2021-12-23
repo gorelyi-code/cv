@@ -1,21 +1,28 @@
-on: [push]
+name: Compile CV and publish to GH pages
+
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   compile_cv_job:
     runs-on: ubuntu-latest
-    name: A job to compile CV
+    name: A job to compile CV and commit pdf to pdf_branch
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Compile CV action step
-        uses: ./
-        id: compile
+        run: |
+          docker build -t CV .
+          docker run --name CV
       - name: Setup config
         run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
+          git config user.name "Mikhail Gorelyi"
+          git config user.email "gorelmich@yahoo.com"
       - name: Commit CV pdf
         run: |
+          docker cp CV:/main.pdf .
           git add main.pdf
           git commit -m "Add main.pdf"
           git push

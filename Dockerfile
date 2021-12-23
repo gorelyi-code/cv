@@ -8,7 +8,6 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
     texlive-latex-recommended \
     texlive-base \
     texlive-pictures
-    # cm-super
 
 COPY cv_files .
 
