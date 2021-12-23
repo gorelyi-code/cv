@@ -25,6 +25,6 @@ jobs:
           mkdir cv
           docker cp CV:/main.pdf cv/resume.pdf
           git checkout -b cv
-          git add resume.pdf
+          git add cv/resume.pdf
           git commit -m "Add resume.pdf"
           git push origin cv
