@@ -20,7 +20,7 @@ jobs:
         run: |
           git config user.name "Mikhail Gorelyi"
           git config user.email "gorelmich@yahoo.com"
-      -name: Checkout my_cv branch
+      - name: Checkout my_cv branch
         uses: actions/checkout@v2
         with:
           ref: 'my_cv'
