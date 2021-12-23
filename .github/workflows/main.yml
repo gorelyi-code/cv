@@ -26,4 +26,4 @@ jobs:
           git checkout cv
           git add resume.pdf
           git commit -m "Add resume.pdf"
-          git push origin cv
+          git push
