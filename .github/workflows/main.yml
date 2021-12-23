@@ -20,10 +20,13 @@ jobs:
         run: |
           git config user.name "Mikhail Gorelyi"
           git config user.email "gorelmich@yahoo.com"
+      -name: Checkout my_cv branch
+        uses: actions/checkout@v2
+        with:
+          ref: 'my_cv'
       - name: Commit CV pdf
         run: |
           docker cp CV:/main.pdf resume.pdf
-          git checkout my_cv
           git add resume.pdf
           git commit -m "Add resume.pdf"
           git push
