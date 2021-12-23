@@ -10,3 +10,12 @@ jobs:
       - name: Compile CV action step
         uses: ./
         id: compile
+      - name: Setup config
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+      - name: Commit CV pdf
+        run: |
+          git add main.pdf
+          git commit -m "Add main.pdf"
+          git push

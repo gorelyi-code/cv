@@ -5,15 +5,11 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
     texlive-generic-recommended \
     texlive-latex-extra \
     texlive-fonts-extra \
-    dvipng \
     texlive-latex-recommended \
     texlive-base \
-    texlive-pictures \
-    texlive-lang-cyrillic \
-    texlive-science \
-    cm-super \
-    texlive-generic-extra
+    texlive-pictures
+    # cm-super
 
-COPY cv_files/entrypoint.sh .
+COPY cv_files .
 
-ENTRYPOINT [ "entrypoint.sh" ]
+CMD ["bash", "entrypoint.sh"]
