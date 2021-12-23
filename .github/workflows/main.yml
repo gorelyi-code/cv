@@ -24,6 +24,7 @@ jobs:
         run: |
           docker cp CV:/main.pdf resume.pdf
           git checkout -b my_cv
+          git fetch
           git add resume.pdf
           git commit -m "Add resume.pdf"
           git push --set-upstream origin my_cv
