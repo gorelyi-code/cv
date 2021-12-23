@@ -14,6 +14,6 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
     cm-super \
     texlive-generic-extra
 
-COPY cv_files/entrypoint.sh /entrypoint.sh
+COPY cv_files/entrypoint.sh .
 
-ENTRYPOINT [ "/entrypoint.sh" ]
+ENTRYPOINT [ "entrypoint.sh" ]
