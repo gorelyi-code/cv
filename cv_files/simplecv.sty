@@ -5,6 +5,8 @@
 \usepackage[hidelinks]{hyperref}            % Hyperlinks
 \usepackage{titlesec}                       % Title formatting
 \usepackage{subfiles}                       % File importing
+\usepackage{import}
+\usepackage{bookmark}
 \usepackage{multicol}                       % Multiple columns
 \usepackage[usenames,dvipsnames]{xcolor}    % Coloring
 \usepackage{enumitem}                       % List customization
@@ -12,14 +14,6 @@
 \usepackage[english]{babel}         % Language styles
 \usepackage{graphicx}                       % Importing graphics
 \usepackage[export]{adjustbox}              % Aligning margins
-
-% % Chinese
-% \usepackage{xeCJK}
-% \setCJKmainfont{BabelStone Han}
-
-% % Cyrillic/Russian
-% \usepackage{hyphenat}
-% \babelfont{rm}{Droid Sans}
 
 % Styling
 \pagestyle{fancy}
@@ -133,13 +127,3 @@
   \def\firstname{#2}%
   \def\firstinit{#3}}
 \boldname{}{}{}
-
-\renewcommand{\mkbibnamegiven}[1]{%
-  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
-  {\mkbibbold{#1}}{#1}%
-}
-
-\renewcommand{\mkbibnamefamily}[1]{%
-  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
-  {\mkbibbold{#1}}{#1}%
-}

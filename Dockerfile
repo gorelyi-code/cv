@@ -5,10 +5,14 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
     texlive-generic-recommended \
     texlive-latex-extra \
     texlive-fonts-extra \
+    dvipng \
     texlive-latex-recommended \
     texlive-base \
     texlive-pictures \
-    texlive-bibtex-extra biber
+    texlive-lang-cyrillic \
+    texlive-science \
+    cm-super \
+    texlive-generic-extra
 
 COPY cv_files .
 
