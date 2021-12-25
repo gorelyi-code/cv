@@ -8,7 +8,7 @@ on:
 jobs:
   compile_cv_job:
     runs-on: ubuntu-latest
-    name: A job to compile CV and commit pdf to pdf_branch
+    name: A job to compile CV and commit pdf to cv branch
     steps:
       - name: Checkout
         uses: actions/checkout@v2
