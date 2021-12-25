@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
     texlive-latex-recommended \
     texlive-base \
     texlive-pictures \
-    texlive-bibtex-extra
+    texlive-bibtex-extra biber
 
 COPY cv_files .
 
