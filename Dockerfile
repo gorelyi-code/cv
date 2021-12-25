@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
     texlive-fonts-extra \
     texlive-latex-recommended \
     texlive-base \
-    texlive-pictures
+    texlive-pictures \
+    texlive-bibtex-extra
 
 COPY cv_files .
 
