@@ -1,18 +1,9 @@
 FROM ubuntu:20.04
 
-RUN apt-get update && apt-get install --yes --no-install-recommends \
-    texlive-fonts-recommended \ 
-    texlive-generic-recommended \
-    texlive-latex-extra \
-    texlive-fonts-extra \
-    dvipng \
-    texlive-latex-recommended \
-    texlive-base \
-    texlive-pictures \
-    texlive-lang-cyrillic \
-    texlive-science \
-    cm-super \
-    texlive-generic-extra
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    texlive-latex-extra
 
 COPY cv_files .
 
