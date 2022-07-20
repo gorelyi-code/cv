@@ -1,1 +1,1 @@
-https://gorelyimikhail.github.io/cv/resume.pdf
+https://gorelyi-code.github.io/cv/resume.pdf
